@@ -1,0 +1,228 @@
+
+    /* Base Styles: Already Included Above */
+
+/* Mobile First Approach */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #004d40;
+    padding: 20px;
+    color: white;
+}
+
+header h1 {
+    font-size: 24px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+.header-buttons button {
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.hero {
+    text-align: center;
+    background-image: url(background.jpg);
+    background-size: cover;
+    color: white;
+    padding: 40px 20px;
+}
+
+.hero h2 {
+    font-size: 36px;
+}
+
+.hero p {
+    margin: 20px 0;
+    font-size: 18px;
+}
+
+.cta-buttons {
+    margin-top: 20px;
+}
+
+.cta-buttons button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.signup {
+    background-color: #00796b;
+    color: white;
+}
+
+.comment {
+    background-color: #ff7043;
+    color: white;
+}
+
+.user-posts {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.user-posts h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.post-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Ensures posts stack on smaller screens */
+}
+
+.post {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 200px;
+}
+
+.post img {
+    width: 100%;
+    height: auto;
+}
+
+.post h3 {
+    padding: 10px;
+    font-size: 16px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #004d40;
+    color: white;
+}
+
+/* Typing effect already included */
+@keyframes changeColor {
+    0% {
+        color: red;
+    }
+    25% {
+        color: blue;
+    }
+    50% {
+        color: green;
+    }
+    75% {
+        color: orange;
+    }
+    100% {
+        color: purple;
+    }
+}
+
+/* Apply the animation to the element */
+.changeColor {
+    animation: changeColor 5s infinite;
+}
+
+/* ----------- RESPONSIVENESS ------------ */
+
+/* For screens smaller than 768px (tablets and mobile) */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .header-buttons {
+        margin-top: 10px;
+    }
+
+    .hero h2 {
+        font-size: 24px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+    }
+
+    .cta-buttons button {
+        margin: 10px 0;
+    }
+
+    .post-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .post {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+/* For mobile devices smaller than 480px */
+@media (max-width: 480px) {
+    header {
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 20px;
+    }
+
+    nav ul {
+        gap: 10px;
+    }
+
+    .hero {
+        padding: 20px;
+    }
+
+    .hero h2 {
+        font-size: 20px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    .cta-buttons button {
+        padding: 8px 16px;
+    }
+
+    .user-posts h2 {
+        font-size: 24px;
+    }
+
+    .post {
+        width: 90%;
+    }
+}
